@@ -13,7 +13,10 @@ namespace Complaint_Management_And_Logging_System.Data_Layer
         private string _conString;
         public DB_Connect()
         {
-            _conString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\92318\source\repos\Complaint Management And Logging System\Complaint Management And Logging System\Complaint_System.mdf; Integrated Security = True";
+            string Path = Environment.CurrentDirectory;
+            string[] appPath = Path.Split(new string[] { "bin" }, StringSplitOptions.None);
+            AppDomain.CurrentDomain.SetData("DataDirectory", appPath[0]);
+            _conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath[0] + @"Complaint_System.mdf; Integrated Security = True";
             con = new SqlConnection(_conString);
         }
 

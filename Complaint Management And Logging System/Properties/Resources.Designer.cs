@@ -89,5 +89,15 @@ namespace Complaint_Management_And_Logging_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grocery_04 {
+            get {
+                object obj = ResourceManager.GetObject("Grocery_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace Complaint_Management_And_Logging_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIN));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.user_Text = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@ namespace Complaint_Management_And_Logging_System
             this.logIN_btn = new System.Windows.Forms.Button();
             this.signUp_label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.adm_chk = new System.Windows.Forms.CheckBox();
+            this.customerChk = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +51,9 @@ namespace Complaint_Management_And_Logging_System
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(91, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.Size = new System.Drawing.Size(96, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Username:";
+            this.label1.Text = "User Id:";
             // 
             // label2
             // 
@@ -118,6 +121,34 @@ namespace Complaint_Management_And_Logging_System
             this.label3.Size = new System.Drawing.Size(512, 37);
             this.label3.TabIndex = 7;
             this.label3.Text = "Super Market Complaint System";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // adm_chk
+            // 
+            this.adm_chk.AutoSize = true;
+            this.adm_chk.BackColor = System.Drawing.Color.Transparent;
+            this.adm_chk.Font = new System.Drawing.Font("Modern No. 20", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adm_chk.Location = new System.Drawing.Point(246, 183);
+            this.adm_chk.Name = "adm_chk";
+            this.adm_chk.Size = new System.Drawing.Size(103, 28);
+            this.adm_chk.TabIndex = 8;
+            this.adm_chk.Text = "Admin";
+            this.adm_chk.UseVisualStyleBackColor = false;
+            this.adm_chk.CheckedChanged += new System.EventHandler(this.adm_chk_CheckedChanged);
+            this.adm_chk.CheckStateChanged += new System.EventHandler(this.adm_chk_CheckStateChanged);
+            // 
+            // customerChk
+            // 
+            this.customerChk.AutoSize = true;
+            this.customerChk.BackColor = System.Drawing.Color.Transparent;
+            this.customerChk.Font = new System.Drawing.Font("Modern No. 20", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerChk.Location = new System.Drawing.Point(355, 183);
+            this.customerChk.Name = "customerChk";
+            this.customerChk.Size = new System.Drawing.Size(127, 28);
+            this.customerChk.TabIndex = 9;
+            this.customerChk.Text = "Customer";
+            this.customerChk.UseVisualStyleBackColor = false;
+            this.customerChk.CheckedChanged += new System.EventHandler(this.customerChk_CheckedChanged);
             // 
             // LogIN
             // 
@@ -126,6 +157,8 @@ namespace Complaint_Management_And_Logging_System
             this.BackgroundImage = global::Complaint_Management_And_Logging_System.Properties.Resources.Grocery_01;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(665, 384);
+            this.Controls.Add(this.customerChk);
+            this.Controls.Add(this.adm_chk);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.signUp_label);
             this.Controls.Add(this.logIN_btn);
@@ -133,6 +166,7 @@ namespace Complaint_Management_And_Logging_System
             this.Controls.Add(this.user_Text);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIN";
             this.Text = "Log IN";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -151,6 +185,8 @@ namespace Complaint_Management_And_Logging_System
         private System.Windows.Forms.Label signUp_label;
         private System.Windows.Forms.Button logIN_btn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox adm_chk;
+        private System.Windows.Forms.CheckBox customerChk;
     }
 }
 

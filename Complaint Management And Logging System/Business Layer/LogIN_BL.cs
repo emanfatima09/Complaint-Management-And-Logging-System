@@ -24,10 +24,30 @@ namespace Complaint_Management_And_Logging_System.Business_Layer
             }
             else 
             {
-                return "Admin";
+                return ret.Role;
 
             }
-           
+            
+
+        }
+        internal void CreateAccount(LogIN_DTO dto)
+        {
+            _lgDl.Create_Account(dto);
+        }
+        public string CheckUser(LogIN_DTO dto)
+        {
+            LogIN_DTO ret = _lgDl.CheckUserFromDB(dto);
+            if (ret == null)
+            {
+                return null;
+            }
+            else
+            {
+                return ret.UserID;
+
+            }
+
+
         }
 
     }

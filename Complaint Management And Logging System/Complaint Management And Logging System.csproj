@@ -61,15 +61,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Panel.Designer.cs">
+      <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business Layer\Complain_BL.cs" />
     <Compile Include="Business Layer\LogIN_BL.cs" />
+    <Compile Include="Complaint_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Complaint_SystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerAccount.Designer.cs">
+      <DependentUpon>CustomerAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer_Complain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customer_Complain.Designer.cs">
       <DependentUpon>Customer_Complain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data Layer\Complain_DL.cs" />
     <Compile Include="Data Layer\DB_Connect.cs" />
     <Compile Include="Data Layer\LogIN_DL.cs" />
+    <Compile Include="Data Transfer Object\Complain_DTO.cs" />
     <Compile Include="Data Transfer Object\LogIN_DTO.cs" />
     <Compile Include="LogIN.cs">
       <SubType>Form</SubType>
@@ -79,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_Panel.resx">
+      <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccount.resx">
+      <DependentUpon>CustomerAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer_Complain.resx">
       <DependentUpon>Customer_Complain.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +121,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Complaint_SystemDataSet.xsc">
+      <DependentUpon>Complaint_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Complaint_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Complaint_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Complaint_SystemDataSet.xss">
+      <DependentUpon>Complaint_SystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,6 +156,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Complaint_System.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Grocery_04.jpg" />
     <None Include="Resources\Grocery_03.jpg" />
     <None Include="Resources\Grocery_02.jpg" />
   </ItemGroup>
