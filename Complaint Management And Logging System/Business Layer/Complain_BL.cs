@@ -30,14 +30,14 @@ namespace Complaint_Management_And_Logging_System.Business_Layer
         }
         public string Check_Complain(Complain_DTO cdto)
         {
-            Complain_DTO ret = cDL.CheckComplain(cdto);
-            if (ret == null)
+            Complain_DTO check = cDL.CheckComplain(cdto);
+            if (check == null)
             {
                 return null;
             }
             else
             {
-                return ret.ComplainId;
+                return check.ComplainId;
 
             }
             

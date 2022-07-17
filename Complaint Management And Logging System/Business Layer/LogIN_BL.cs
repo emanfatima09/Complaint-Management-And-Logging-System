@@ -36,14 +36,14 @@ namespace Complaint_Management_And_Logging_System.Business_Layer
         }
         public string CheckUser(LogIN_DTO dto)
         {
-            LogIN_DTO ret = _lgDl.CheckUserFromDB(dto);
-            if (ret == null)
+            LogIN_DTO check = _lgDl.CheckUserFromDB(dto);
+            if (check == null)
             {
                 return null;
             }
             else
             {
-                return ret.UserID;
+                return check.UserID;
 
             }
 
