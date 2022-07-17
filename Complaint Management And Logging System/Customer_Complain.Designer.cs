@@ -37,6 +37,7 @@ namespace Complaint_Management_And_Logging_System
             this.Complain_details = new System.Windows.Forms.RichTextBox();
             this.reg_Complain = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.track = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,17 +81,28 @@ namespace Complaint_Management_And_Logging_System
             // 
             this.timer1.Interval = 1000;
             // 
+            // track
+            // 
+            this.track.BackColor = System.Drawing.Color.Black;
+            this.track.ForeColor = System.Drawing.SystemColors.HighlightText;
+            resources.ApplyResources(this.track, "track");
+            this.track.Name = "track";
+            this.track.UseVisualStyleBackColor = false;
+            this.track.Click += new System.EventHandler(this.track_Click);
+            // 
             // Customer_Complain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Complaint_Management_And_Logging_System.Properties.Resources.Grocery_03;
+            this.Controls.Add(this.track);
             this.Controls.Add(this.reg_Complain);
             this.Controls.Add(this.Complain_details);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "Customer_Complain";
+            this.Load += new System.EventHandler(this.Customer_Complain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +116,6 @@ namespace Complaint_Management_And_Logging_System
         private System.Windows.Forms.RichTextBox Complain_details;
         private System.Windows.Forms.Button reg_Complain;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button track;
     }
 }

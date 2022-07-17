@@ -42,6 +42,21 @@ namespace Complaint_Management_And_Logging_System.Business_Layer
             }
             
         }
+        public string Track_Complain(Complain_DTO cdto)
+        {
+            Complain_DTO check = cDL.TrackComplain(cdto);
+            if (check == null)
+            {
+                return null;
+            }
+            else
+            {
+                return check.ComplainId;
+
+            }
+
+        }
+
 
     }
 }

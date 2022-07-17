@@ -38,8 +38,23 @@ namespace Complaint_Management_And_Logging_System
             _cdto.Description = Complain_details.Text;
             _cdto.Status = "In progress";
             _cBL.Add_Complain(_cdto);
-            MessageBox.Show("Complaint registered successfully!");
+           
             
+            MessageBox.Show("Complaint registered successfully!" );
+
+
+
+        }
+
+        private void Customer_Complain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void track_Click(object sender, EventArgs e)
+        {
+            TrackComplain tracking = new TrackComplain();
+            tracking.Show();
 
         }
     }

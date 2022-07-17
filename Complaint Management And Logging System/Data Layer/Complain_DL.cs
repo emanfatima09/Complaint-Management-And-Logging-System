@@ -80,5 +80,24 @@ namespace Complaint_Management_And_Logging_System.Data_Layer
             con.Con.Close();
             return null;
         }
+        public Complain_DTO TrackComplain(Complain_DTO cdto)
+        {
+            con.Con.Open();
+            string checkQuery = "SELECT * FROM Complain_Data WHERE Complain_Id='" + cdto.ComplainId + "' ;";
+            SqlCommand com = new SqlCommand(checkQuery, con.Con);
+            SqlDataReader reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                cdto.ComplainId = reader["Complain_Id"].ToString();
+                cdto.CustomerId = reader["Customer_id"].ToString();
+                cdto.Type = reader["Complain_Type"].ToString();
+                cdto.Status = reader["Complain_Description"].ToString();
+                cdto.Description = reader["Complain_Status"].ToString();
+                con.Con.Close();
+                return cdto;
+            }
+            con.Con.Close();
+            return null;
+        }
     }  
 }
